@@ -1,0 +1,787 @@
+\documentclass[11pt]{article}
+\usepackage{a4wide}
+\usepackage{times}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+
+\usepackage{amssymb}
+\usepackage{xcolor}
+\newcommand{\mynote}[3][black]{\textcolor{#1}{\fbox{\bfseries\sffamily\scriptsize{#2}}
+{\small$\blacktriangleright$\textsf{\emph{#3}}$\blacktriangleleft$}}}
+\newcommand{\pem}[1]{} %{\mynote[cyan]{Pierre-Etienne}{#1}}
+\newcommand{\ld}[1]{\mynote[magenta]{Laurence}{#1}}
+\newcommand{\TODO}[1]{\mynote[red]{TODO}{#1}}
+
+
+
+\title{GdR Génie de la Programmation et du Logiciel\\ Demande de renouvellement pour la période 2021-20??}
+\author{Mireille Blay-Fornarino\\
+Laboratoire d'Informatique, Signaux et Systèmes de Sophia-Antipolis (I3S)\\ 
+UMR7271 - UNS CNRS\\
+2000, route des Lucioles - Les Algorithmes - bât. Euclide B\\
+06900 Sophia Antipolis - France}
+\begin{document}
+\maketitle
+
+\begin{itemize}
+\item Nom de l'unité : GdR Génie de la Programmation et du Logiciel
+\item Numéro de l'unité : GDR 3168
+\item Institut : INS2I
+\item Direction Régionale : Délégation Centre-Est - DR6
+\item Code division : 1099
+\item Groupe de discipline budgétaire : A1INS2I
+\item Date de création : 1er janvier 2008
+\item Date de renouvellement : 1er janvier 2021
+\item Directeur : Mireille Blay-Fornarino, Professeur à l'Université de Nice Côte d'Azur, Laboratoire I3S
+\item Site web : \url{http://gdr-gpl.cnrs.fr/}
+\end{itemize}
+
+\section{Motivation et enjeux scientifiques}
+
+Le renouvellement du GDR Génie de la Programmation et du Logiciel (GPL) est
+demandé auprès du CNRS pour une nouvelle période de ?? ans allant de janvier
+2021 à décembre 20??.
+L'objectif du GDR GPL est de continuer à animer la communauté scientifique dans
+le domaine du Génie Logiciel et de la Programmation, et également d'être un outil de prospective scientifique dans ce domaine par les retours de notre communauté et les collaborations avec d'autres communautés.
+
+
+
+%Jeunes chercheurs
+
+
+%\section{Motivation}
+
+Le Génie de la Programmation et du Logiciel est au c{\oe}ur de l'activité
+informatique. Les concepts, méthodes et les outils de conception et de
+validation de logiciels constituent les éléments manipulés par les
+informaticiens pour maîtriser et automatiser les problèmes qui leur sont
+soumis. Les grandes thématiques du domaine sur lesquelles les chercheurs du
+domaine travaillent sont : 
+
+\begin{itemize}
+\item l'ingénierie des exigences et la traçabilité logicielle,
+\item l'ingéniérie dirigée par les modèles, qui exploite une continuité entre
+  modélisation, conception et programmation  et s'appuie sur des techniques de
+  transformation de modèles,
+%\item l'utilisation de patrons pour l'analyse, l'architecture ou la conception de logiciels,
+%\item l'utilisation des aspects pour la conception et la programmation, ce qui permet une séparation des préoccupations et une meilleure prise en compte de l'évolution,
+\item la séparation et la composition de préoccupation pour maîtriser la conception, le développement et l'évolution de grands systèmes,
+\item la conception à base de composants et d'une façon plus générale, l'étude
+  des frontières dans le logiciel (modules, composants, aspects, services),
+\item l'ingénierie des lignes de produits logiciels,
+\item la conception et l'utilisation de langages métiers et de langages
+  spécifiques à des domaines,
+\item la conception de langages plus sûrs et plus expressifs,
+\item le développement des techniques de vérification et de validation à partir
+  de spécifications ou de code : analyse statique, génération de tests et
+  raffinements prouvés,
+\item les approches de compilation pour des architectures spécifiques et notamment parallèles,
+\item la maintenance logicielle,
+\item la testabilité logicielle.
+\item empirique
+\item continuité devOps
+\end{itemize}
+\medskip
+\noindent
+Avec l'omniprésence de l'informatique dans notre vie que ce soit en termes
+d'informatique embarquée, d'intelligence ambiante, d'extension du web au niveau
+de la planète, d'intégration dans les objets du quotidien, ou encore avec le
+développement de grandes infrastructures de calcul ou de traitement de grandes
+masses de données, de nouvelles questions de recherche sont posées.
+De nouveaux paradigmes, de nouveaux langages, de nouvelles approches de
+modélisation, de vérification, de tests et de nouveaux outils dans le domaine
+de la programmation et du logiciel devraient voir le jour dans les 5 à 10 ans à
+venir, que ce soit pour faciliter la vie des concepteurs de logiciels, pour
+modéliser et fiabiliser les logiciels ou encore pour devancer l'évolution
+technologique, mais également pour prendre en compte de nouveaux enjeux de
+société tels que le développement durable et les économies d'énergie. 
+
+% Défis
+% -----
+% * Des exigences à la réalisation des logiciels
+%   - Modéliser et analyser des Systèmes de Systèmes (sécurité, développement et évolution dyamique)
+%   - Gérer et modéliser la variabilité à grande échelle (lignes de produits)
+%   - Composer et coordonner des langage de modélisation spécifiques (DSL)
+
+% * De la compilation à l'exécution des logiciels
+%   * Maitriser la difficulté de programmation des architectures multi-coeurs
+%   Assurer la portabilité des codes et des performances
+%   - Optimiser les mouvements de données et savoir prédire les temps
+%     d'exécution en présence de parallèlisme
+%   - Assurer la validité des transformations effectuées par les compilateurs
+%     [a deplacer dans la section vérification]
+%   - Etre capable de reproduire les expériences et de vérifier les résultats,
+%     en particulier dans le domaine de l'optimisation du logiciel
+%   * Inventer une nouvelle façon de considérer les pilotes de périphériques en
+%     s'inspirant du domaine génomique pour faciliter leurs adaptations
+%   * Optimiser la consommation d'énergie des logiciels s'exécutant sur des
+%     architectures multi-coeurs [a factoriser avec la section précédente]
+
+% * Méthodes et outils de validation et de vérification
+%   - Inventer des méthodes de validatidation et de vérification plus
+%     facilement paramétrables ou automatisable pour s'adapter à l'évolution des
+%     systèmes
+%   - Permettre au méthodes basées sur les tests de passer plusfacilement à l'échelle
+%   - Concevoir des logiciels capable de s'adapter aux défaillances en corrigeant éventuellement les fautes
+
+
+
+Plusieurs grandes familles thématiques ont été définies lors des actions de
+prospective que nous avons menée en 2010 et 2014 (texte en annexe), à savoir 
+la modélisation des systèmes de systèmes, 
+la modélisation des logiciels prenant en compte la variabilité à grande echelle,
+la maîtrise de la programmation des architectures multi-c{\oe}urs,
+l'optimisation de la consommation d'énergie des logiciels,
+l'étude des pilotes de périphériques en s'inspirant du domaine génomique,
+et, finalement, la place des méthodes et outils de vérification et de validation. 
+%
+Sans vouloir être exhaustif, ces six familles regroupent une grande partie des
+thèmes de la programmation et du génie logiciel abordés par les équipes
+françaises actuellement. 
+%
+\pem{mettre à jour ce paragraphe}
+D'autres thèmes non identifiés en tant que tels suscitent des débats et donnent
+également de nouveaux enjeux pour les travaux de recherche futurs dans le
+domaine. Il s'agit du continuum dans le développement, des approches agiles, de
+l'association entre connaissance et développement, du dialogue avec
+l'utilisateur pendant les phases de développement et de l'apprentissage par les
+usages, le développement et l'exécution dans des environnements ouverts, la
+complexité et le passage à l'échelle dans l'utilisation des approches
+formelles, de l'utilisation de vues dynamiques pour manipuler ou remodulariser
+des  objets existants, et, finalement la contractualisation et la
+responsabilité face aux utilisateurs du logiciel.
+
+Dans ce document, nous rappelons les objectifs du GDR GPL et définissons de
+nouvelles actions pour le nouveau quadriennal. Nous proposons une nouvelle
+composition du bureau et du conseil scientifique du GDR GPL et donnons la liste
+des responsables de groupe. 
+
+\section{Objectifs}
+
+La proposition de renouvellement du GDR Génie de la Programmation et du
+Logiciel (GPL) vise des objectifs d'animation de la communauté scientifique
+avec la proposition d'un cadre structurant pour un ensemble de groupes de
+travail qui réunissent les équipes françaises actives dans le domaine de la
+programmation et du génie logiciel. Onze groupes et une action transversale sont présentés
+dans ce document, mais le GDR reste ouvert à de nouvelles propositions. Cinq
+groupes existants (Compilation, LTP, MFDL, MTV2, RIMEL) et les actions IDM et
+AFSEC dans le quadriennal précédent ont demandé leur reconduction. Quatre
+nouveaux groupes sont créés (ESE, GLACE, IE, SdS) et une nouvelle action
+transversale est créée (ALROB). Cette répartition couvre l'ensemble des travaux
+de la communauté française dans le domaine du Génie de la Programmation et du Logiciel.
+
+Le GDR se veut être un groupement\pem{est-ce le bon terme ?} où la reflexion et les échanges sont permanents.
+Le GDR apportera ainsi son soutien aux groupes de travail pour leurs activités d'animation (organisation de journées, généralement sur base annuelle) et encouragera la mobilité de chercheurs en offrant un soutien financier. Il soutiendra l'organisation de conférences, colloques et ateliers associés au GDR lorsque ceux-ci seront organisés par les groupes de travail.
+Le GDR aura également pour mission d'organiser les journées nationales, afin de permettre la rencontre des diverses communautés qui constituent le GDR. Finalement, il apportera son soutien à l'Ecole des Jeunes Chercheurs en Programmation sous la forme d'interventions dans les différents cours de l'école, mais également par un soutien financier. En sus de ces actions, nous proposons de nouvelles actions pour la période 2016-2019. 
+
+Nous rappelons ci-dessous le fonctionnement de l'animation de la communauté et nous développons les actions vers les jeunes chercheurs. Nous proposons de nouvelles actions de partage scientifique et de bonnes pratiques au sein de notre communauté. Nous encouragerons les groupes de travail à mener ces actions dans leur thématique.
+Finalement, nous envisageons des actions de prospective, de développement vers l'international et vers le monde industriel qui seront essentiellement menées par les membres du bureau du GDR.
+
+%\section{Propositions pour la période 2012-2015}\label{actions}
+
+\subsection{Animation de la communauté}
+
+\subsubsection{Journées nationales}
+
+Les journées nationales ont constitué chaque année un temps fort dans la vie du
+GDR GPL. Nous comptons bien sûr reconduire ces journées, en les co-localisant à
+des conférences ou journées nationales du domaine.
+Cela permettra aux chercheurs du domaine de se retrouver et d'échanger, mais
+également de prendre connaissance de domaines connexes. 
+Pour garantir la qualité de ces journées, nous impliquerons les groupes de travail dans la constitution du programme scientifique.
+La prochaine édition aura lieu à Bordeaux du 9 au 12 juin 2015 et sera co-localisée avec les ateliers AFADL et la conférence nationale CIEL.
+
+%, ainsi qu'avec l'Ecole Jeunes Chercheurs en Programmation. Cette co-localisation avec l'Ecole Jeunes Chercheurs devrait permettre une plus grande participation des jeunes doctorants. Nos collègues de Nancy sont d'ores et déjà candidats pour l'édition 2013, ce qui montre la vitalité de ces journées et nous encourage à poursuivre l'effort entrepris pour que ces journées réunissent des événements scientifiques de qualité.
+
+\subsubsection{Animation scientifique par les groupes de travail}
+
+Les groupes de travail seront encouragés à organiser des réunions de travail
+tout au long de l'année, ou éventuellement au moment des journées nationales. 
+Le GDR apportera son soutien financier pour faciliter l'intendance de ces journées.
+
+\subsubsection{Soutien aux manifestations nationales et internationales}
+
+Le GDR GPL consacrera une partie de son budget au soutien des conférences
+nationales et internationales dans le domaine du Génie Logiciel et de la
+Programmation. Ces soutiens se feront à la demande d'un groupe de travail
+lorsque celui-ci sera impliqué dans l'organisation de cette manifestation.
+Plusieurs manifestations internationales sont d'ores et déjà prévues en France
+sur la période 2015-2016. Il s'agit par exemple de SAS en 2015 à Saint Malo,
+ICFEM en 2015 à Orsay et MoDELS en 2016 à Saint Malo.
+
+\subsection{Actions vers les jeunes chercheurs}
+
+Le GDR a à c{\oe}ur d'inclure l'ensemble des jeunes doctorants dans la
+communauté. Dans ce sens plusieurs actions seront organisées :
+
+\begin{itemize}
+\item L'École des Jeunes Chercheurs en Programmation, créée en 1991, réunit
+  chaque année une quarantaine de jeunes doctorants dans les thématiques du GDR
+  GPL. Le GDR est l'un des sponsors principaux de cette manifestation.
+  L'aide du GDR GPL a permis de maintenir des tarifs d'inscription très bas, incluant
+  les frais d'hébergement, pour les jeunes chercheurs participants.
+
+\item Le GDR GPL soutiendra également d'autres écoles d'été, comme cela a été
+  fait sur le précédent quadriennal sur recommandation des groupes de travail
+  qui y seront fortement impliqués.
+
+\item Depuis quelques années les inscriptions aux journées nationales sont
+  offertes ou proposées à un tarif très bas (50 EUR) aux jeunes chercheurs
+  présentant leur travail. Nous souhaitons continuer dans ce sens de façon à
+  accueillir les jeunes doctorants dans la communauté et à leur permettre
+  rapidement de se construire un réseau professionnel.
+
+\item Lors du précédent quadriennal un prix de thèse dans le domaine du Génie
+  Logiciel et de la Programmation a été créé. 
+  Les deux premiers lauréats sont Gabriel Kerneis (PPS, prix 2012) et Mathias
+  Bourgoin (LIP6, prix 2013).
+  Nous continuerons à organiser ce prix permettant de reconnaître les travaux les plus
+  marquants des jeunes docteurs du domaine. 
+  %En effet, les prix de thèse existants récompensent peu les thèses de notre domaine. 
+  Cette action continuera à s'appuyer fortement sur le conseil scientifique du GDR.
+ %Nos travaux sont des travaux au c\oe ur de la discipline informatique et non aux interfaces, donc moins visibles. 
+ \end{itemize}
+
+
+\subsection{Partage au sein de la communauté GDR GPL}
+
+\subsubsection{Mobilité}
+
+Le GdR Génie de la Programmation et du Logiciel a mis en place depuis 2010 une action d'incitation à la collaboration et à la mobilité entre équipes. Ces mobilités ont pour objectif de favoriser des travaux communs
+entre chercheurs. Des bourses d'un montant forfaitaire de 500 EUR  ont été proposées. Elles sont destinées à couvrir des frais de déplacement et de logement d'un doctorant, d'un chercheur ou enseignant-chercheur pour un séjour de courte durée dans une autre équipe, géographiquement distante (située dans un autre département). Ces mobilités ont permis la publication d'articles, mais aussi l'amorce de projets collaboratifs. Nous pensons reconduire cette action dans le prochain quadriennal.
+
+\subsubsection{Soutien dans l'écriture d'articles de recherche sur les grandes conférences et sur les réponses aux appels à projets}
+
+L'un des constats de ce quadriennal est qu'il est nécessaire que notre communauté soit plus présente dans les programmes des grandes conférences internationales ou dans les grands journaux internationaux. Cela passe par différentes actions qui sont le mentorat pour l'écriture d'article, mais également par le renforcement de la présence de notre communauté dans les comités de programmes des conférences internationales, dans les comités d'édition des journaux. De grandes conférences internationales telles que la conférence ICSE proposent un système de relecture d'articles par un mentor. L'idée est de proposer à ceux qui le souhaitent ce type de service, sur la base du volontariat.
+%, mais également d'être plus présent en nombre lors des grands événements internationaux. 
+
+%\subsubsection{Cartographie des laboratoires}
+%\pem{à développer}
+
+%ou dans les comités scientifiques des appels à projets. 
+%
+%, le soutien dans la réponse aux appels à projets de type ANR \\
+%De même, les réponses aux appels à projets demandent une connaissance à la fois des techniques d'écriture des projets, mais également du système de sélection. Nous proposerons, également sur la base du volontariat, une relecture commentée de ces réponses.
+
+%\subsubsection{Répertoire de documents scientifiques et d'outils de recherche}
+%
+%Notre communauté produit de très nombreux documents scientifiques (articles, thèses, rapports) accessibles au travers de moteurs de recherche. 
+%L'idée est d'organiser leur accès par thématique en listant par exemple les articles de références ou encore la liste des thèses soutenues, de façon à aider les personnes débutant sur un sujet.
+%Ce travail pourra être mené par les groupes de travail.
+%\\
+%Il en va de même pour les outils de recherche. Avoir un répertoire contenant un descriptif et des retours d'évaluation de ces outils 
+%rs du précédent quadriennal
+%permettrait un gain de temps lorsque l'on doit faire choisir, que ce soit dans le montage d'expérimentation ou encore pour la validation de résultats.
+
+%\subsection{Enseignement du Génie de la Programmation et du Logiciel}
+
+%Nombre d'entre nous sommes enseignants et chercheurs dans des universités ou des écoles d'ingénieurs. Par notre enseignement, nous diffusons les connaissances de notre domaine de recherche vers de jeunes étudiants en vue de les former aux nouvelles avancées scientifiques et techniques.
+
+%\subsubsection{Réflexion sur un cursus GPL}
+
+%Construire un programme qui couvre notre domaine est un exercice que nous faisons régulièrement lors de l'écriture des habilitations de Licence ou Master. L'objectif de cette action est de réfléchir à ce que doit contenir un cursus Génie de la Programmation et du Logiciel. L'enjeu est de proposer un cursus de qualité aux futurs diplômés, mais également de former des jeunes diplômés ayant des connaissances solides dans le domaine et qui trouveront à s'insérer facilement dans le monde socio-professionnel. 
+%\\
+%Pour parvenir à convaincre la communauté universitaire de la nécessité de définir un cursus commun et le pérenniser dans le cadre des formations orientées Génie Logiciel, ce travail devra être mené conjointement avec l'association SPECIF.
+
+%\subsubsection{Répertoire pédagogique} 
+
+%Les formes d'enseignement de notre domaine sont nombreuses, qu'il s'agisse d'outils, de langages, d'exercices, de projets ou d'initiatives particulières. 
+%L'objectif de cette action est de répertorier les formes les plus utilisées, de les partager en les commentant en vue de créer une communauté active autour de l'enseignement du domaine.
+
+\subsection{Actions de prospective, développement vers l'international et contact avec le monde industriel}
+
+\subsubsection{Prospectives scientifiques}
+
+En 2010 et 2014, des actions de prospective scientifique dédiées à
+l'identification des nouveaux défis pour le GDR Génie de la Programmation et du
+Logiciel ont été menées. Les documents sont disponible sur le site web du GDR.
+Le document 2010 a été largement diffusé vers nos instances et a été publié
+dans la revue TSI. Le document 2014 est en cours de finalisation et sera
+diffusé de la même manière. Mener ce type d'action régulièrement semble
+nécessaire pour identifier les nouveaux défis ainsi que les avancées du
+domaine. Nous proposerons de mener une action de prospectives à nouveau en
+milieu de troisième quadriennal en 2017-2018.
+
+\subsubsection{Développement à l'international}
+\pem{mettre à jour ?}
+Plusieurs groupes de travail ont développé des relations  suivies avec des équipes internationales. On peut noter par exemple l'action IDM qui a organisé une master class à Oslo avec le SINTEF en 2010. Nous encouragerons le développement de ces relations et proposerons à différents groupes de travail de monter un GDRI sur le prochain quadriennal. 
+
+\subsubsection{Renforcer les liens avec le tissu industriel}
+%\pem{mettre à jour}
+
+Dans le prochain quadriennal, nous allons poursuivre la mise en place d'un
+``club industriel'', de façon à renforcer les liens entre la communauté
+scientifique et les partenaires socio-économiques du domaine. 
+Patrick Farail, détaché par Airbus à l'IRT Saint Exupéry (Toulouse) a accepté
+de présider ce club, dont l'IRT Saint Exupéry serait le premier membre.
+
+La prochaine action que nous mènerons au cours du premier semestre 2015 sera
+d'organiser un journée de rencontre, en direction des industriels.
+
+Au cours du prochain quadriennal nous envisageons de mettre en place un certain
+nombre d'outils et de manifestations permettant d'établir des échanges
+structurés avec le milieu industriel. Nous pensons en particulier effectuer une
+cartographie des laboratoires, permettant de recenser les compétences, les
+collaborations et les formations existantes.
+Nous organiserons également des séminaires permettant d'échanger afin de mieux
+se connaitre et de mieux cerner les besoins et les attentes aussi bien du
+milieu industriel que du milieu académique.
+
+
+%Nous allons L'une des premières actions sera l'organisation d'une rencontre Industries du logiciel - GDR dans l'année 2011-2012 sur la ville de Toulouse. Cette journée sera un prélude à la création de ce club de partenaires. 
+%Les entreprises adhérentes à ce club de partenaires pourront alors bénéficier d'une cartographie des laboratoires du domaine et avoir des relations privilégiées  avec les différents groupes de travail. Déjà, le groupe NEPTUNE, qui regroupe les industriels utilisateurs des technologies issues de l'IDM (Ingénierie Dirigée par les Modèles), tels que C-S, Astrium ou Airbus, organise régulièrement des journées rencontres industries-académiques et participent aux activités du GDR GPL. 
+% Nous comptons également nous appuyer sur les pôles de compétitivité tels que Systematic, Minalogic, AeroSpace Valey ou encore SCS pour renforcer les liens avec le tissu industriel.
+
+
+
+\section{Renouvellement de l'organisation du GDR GPL}\label{organisation}
+
+La structuration du GDR GPL passe essentiellement 
+par les groupes de travail et les actions transversales.
+
+
+L'animation se traduit 
+    par des réunions de ces groupes et actions,  
+    l'organisation de journées nationales, 
+    le soutien à des actions spécifiques, 
+    mais également par l'utilisation d'outils de communication
+    et de partage tels que la liste de diffusion et le site web, et des actions ponctuelles telles qu'une réflexion de prospection sur les défis scientifiques du domaine. 
+
+Les actions de prospection et de veille découlent de cette organisation. Pour leur donner plus d'ampleur, chaque année nous demanderons aux GT de produire 1/2 pages sur ce point, notamment relativement aux défis qui sont à l'origine des GTs.
+
+
+
+%\pem{mettre à jour}
+Plus de 80 équipes se répartissent sur les 10 groupes ou actions,
+soit environ 350 enseignants-chercheurs, 50 postdocs et ingénieurs et 300
+doctorants.
+
+Les principales actions de l'animation du GDR GPL sont issues des membres du
+Comité de Direction et des responsables des groupes de travail. 
+
+Pour préparer ce dossier de renouvellement nous avons échangé avec les différents
+responsables de groupe de travail et les membres du comité de direction.
+Pour permettre au GDR de continuer à être dynamique et innovant nous avons
+encouragé la création de nouveau groupes et c'est tout naturellement que
+plusieurs responsables de groupes ou membre de l'équipe de direction ont
+proposé de passer le relai à d'autres collègues.
+
+
+\subsection{Comité de direction}
+La direction du GDR GPL est organisée autour d'un comité dont nous donnons la
+composition, sur le ??quadriennal?? précédent (2016--2020) et le celui à venir
+(2021--20??) :
+
+\begin{small}
+\begin{center}
+\begin{tabular}{c|c}
+  \textit{2016--2020} & \textit{2021--20??}\\
+  \\
+
+\hspace*{0.2cm}
+\begin{minipage}[t]{.5\textwidth}
+  \textbf{Un directeur du GDR :}
+  \begin{quote}
+    \textbf{Pierre-Etienne Moreau},
+  Professeur à l'Université de Lorraine, École des
+        Mines de Nancy, laboratoire LORIA
+  \end{quote}
+  \textbf{Responsables du pôle \textit{Langages et Vérification} :}
+  \begin{quote}
+    \textbf{Yamine Ait Ameur}, Professeur à l'ENSEEIHT, laboratoire IRIT
+
+    \textbf{Catherine Dubois}, Professeur à l'École Nationale Supérieure d'Informatique pour l'Industrie et l'Entreprise, laboratoire Cedric
+  \end{quote}
+
+  \textbf{Responsables du pôle \textit{Développement de Logiciel} :}
+  \begin{quote}
+    \textbf{Mireille Blay-Fornarino}, Professeur à l'Université de Nice-Sophia-Antipolis et au laboratoire I3S
+
+    \textbf{Xavier Blanc}, Professeur à l'Université de Bordeaux, laboratoire LABRI
+\end{quote}
+
+\textbf{Responsable de la communication :}
+\begin{quote}
+  \textbf{Yves Ledru}, Professeur à l'Université de Grenoble et au LIG
+\end{quote}
+
+\textbf{Responsable de l'Ecole des Jeunes Chercheurs en Programmation :}
+\begin{quote}
+  \textbf{Jean-Christophe Filliatre}, Chargé de Recherche au CNRS, laboratoire LRI
+\end{quote}
+\end{minipage}
+&
+\begin{minipage}[t]{.5\textwidth}
+  \textbf{Un directeur du GDR :}
+  \begin{quote}
+    \textbf{Mireille Blay-Fornarino}, Professeur à l'UniversitéNice Côte d'Azur et au Laboratoire I3S
+  \end{quote}
+
+  \textbf{Responsables du pôle \textit{Langages et Vérification} :}
+  \begin{quote}
+ %   \textbf{??}, ??, ??
+
+     \textbf{Catherine Dubois}, Professeur à l'École Nationale Supérieure d'Informatique pour l'Industrie et l'Entreprise, laboratoire Cedric
+  \end{quote}
+
+  \textbf{Responsables du pôle \textit{Développement de Logiciel} :}
+      \textbf{JMB}, ---
+  \begin{quote}
+
+\end{quote}
+
+\textbf{Responsable de la communication :}
+\begin{quote}
+  \textbf{Yves Ledru??}, Professeur à l'Université de Grenoble et au LIG
+\end{quote}
+
+\textbf{Responsable de l'Ecole des Jeunes Chercheurs en Programmation :}
+\begin{quote}
+  \textbf{Laure??}, --- 
+  \end{quote}
+  \textbf{Responsable des relations avec les entreprises :}
+\begin{quote}
+      \textbf{Xavier Blanc}, Professeur à l'Université de Bordeaux, laboratoire LABRI
+\end{quote}
+\end{minipage}
+
+\end{tabular}
+\end{center}
+
+\end{small}
+\medskip
+
+\noindent
+
+
+\textbf{L'organisation en pôle} doit permettre des interactions directes avec les chercheurs qui connaissent bien ??? permettant ainsi d'épauler la directrice du GDR pour répondre aux demandes de l'INS2I ??
+
+Le rôle du comité de direction sera intensifié pour répondre aux nouvelles demandes de l'INS2I en matière de prospectives et favoriser les interactions avec les autres disciplines auxquelles le génie du logiciel et de la programmation ...
+Nous lui avons ajouté un responsable (chercheur) des relations avec les entreprises et les Instituts de Recherche Technologique  qui devrait nous aider à une meilleure diffusion des informations de part et d'autres.
+
+
+
+Le comité de direction se réunira environ trois fois par an par téléphone, pour
+discuter du budget et de l'organisation des
+principaux événements (journées nationales, actions de prospective, actions
+spécifiques, école jeunes chercheurs). Le comité de direction se réunira
+également chaque année à l'occasion des journées nationales.
+
+Outre ces réunions téléphoniques, la plupart des décisions d'attribution d'un
+soutien financier du GDR seront discutées par email.
+
+???? 
+La communication sera intensifiée en utilisant des outils xxxxx
+
+
+
+\subsection{Responsables de groupes de travail et actions}
+A ce stade, nous n'avons pas défini les groupes de travail.
+Nous explicitons ici la méthode que nous proposons de suivre pour construire nos nouveaux groupes de travail.
+
+
+Afin de mieux voir les évolutions, nous rappelons quels étaient les groupes de travail sur
+la période 2012--2015:
+
+{	\centering
+\begin{tabular}{|p{6cm}p{8.5cm}|}
+\hline
+\bf Groupes (2012--2015) & \bf Responsables \\
+\hline
+COSMAL & Pascal Poizat, LIP6, Université Paris Ouest Nanterre \\
+\footnotesize Composants Objets Services : Modèles, Architectures et Langages  & Romain Rouvoy, CRIStAL, Université Lille 1\\
+
+FORWAL & Yohan Boichut, LIFO, Université d'Orléans\\
+\footnotesize  Formalismes et Outils pour la Vérification et la Validation  & Pierre-Cyrille Heam, FEMTO-ST, Université de Franche-Comté \\
+
+LaMHa & Gaétan Hains, LACL, Université de Paris-Est Créteil \\
+\footnotesize Langages et Modèles de Haut-niveau pour la programmation parallèle, distribuée, de grilles de calcul et Applications & Frédéric Gava, LACL, Université de Paris-Est Créteil \\
+
+LTP & Catherine Dubois, CEDRIC, ENSIIE\\
+\footnotesize Langages, Types et Preuves & Marc Pouzet, LIENS, Membre Junior IUF, ENS, Université Pierre et Marie Curie\\
+
+MFDL & Yamine Ait Ameur, IRIT, ENSEEIHT\\
+\footnotesize  Méthodes Formelles  & Virginie Wiels, ONERA  \\
+\footnotesize  dans le Développement Logiciel & Akram Idani, LIG, ENSIMAG\\
+
+
+MTV2 & Frédéric Dadeau, FEMTO-ST, Univ. de Franche-Comté \\
+\footnotesize Méthodes de test pour la validation et la vérification  & Lydie du Bousquet, LIG, Université Grenoble\\
+
+RIMEL & Salah Sadou, Irisa, Université Bretagne-Sud\\
+\footnotesize Rétro-Ingénierie, Maintenance et Evolution des Logiciels
+& Chouki Tibermacine, LIRMM, Université de Montpellier II \\
+
+Compilation & Laure Gonnord, LIP , Université Lyon 1\\
+&  Fabrice Rastello, INRIA/LIP, ENS Lyon \\
+& Florian Brandner, ENSTA \\
+
+\hline 
+\textbf{Actions transversales}&\\
+\hline 
+Action AFSEC & Claude Jard, LINA, Université de Nantes\\
+\footnotesize Approches Formelles des Systèmes Embarqués Communicants &Olivier H. Roux, IRCCyN, École Centrale de Nantes \\
+Action IDM & Isabelle Borne, Irisa, Université Bretagne-Sud\\
+\footnotesize Ingénierie Dirigée par les Modèles& Sara Tucci , CEA-LIST\\
+
+\hline
+		\end{tabular}
+}
+\bigskip
+
+\noindent
+Pour ce nouveau quadriennal deux groupes se recomposent dans des groupes
+existants et quatre nouveaux groupes de travail sont proposés ainsi qu'une
+action transversale (commune avec le GDR Robotique) :
+\begin{itemize}
+  \item ``FORWAL'' (Formalismes et Outils pour la Vérification et la
+    Validation) se rapproche du groupe de travail ``LTP'' (Langages, Types et
+    Preuves) et du groupe de travail ``Vérif'' du GDR-IM. ``LaMHa'' (Langages
+    et Modèles de Haut-niveau pour la programmation parallèle, distribuée, de
+    grilles de calcul et Applications) se recompose avec ``LTP'',
+
+  \item ``ESE'' (Génie Logiciel Empique), ``GLACE'' (Génie Logiciel pour les
+  systèmes Cyber-physiquEs) ``IE'' (Ingénierie des Exigences), ``SdS''
+  (Systèmes de Systèmes) et ``Action ALROB'' (Architecture logicielles pour la
+  robotique autonome et les systèmes auto-adaptables) sont créés,
+
+\item ``Action IDM'' (Ingénierie Dirigée par les Modèles) et ``Action AFSEC''
+  (Approches Formelles des Systèmes Embarqués Communicants) deviennent des
+  groupes de travail du GDR.
+\end{itemize}
+
+{	\centering
+		\begin{tabular}{|p{6cm}p{8.5cm}|}
+\hline
+\bf Groupes (2016-2019) & \bf Responsables \\
+\hline
+\hline
+Action AFSEC & Claude Jard, IRISA, Université de Nantes\\
+\footnotesize Approches Formelles des Systèmes Embarqués Communicants 
+             &Olivier H. Roux, IRCCyN, École Centrale de Nantes \\
+\hline
+COMPILATION
+& Florian Brandner, ENSTA\\
+& Laure Gonnord, LIP , Université Lyon 1\\
+& Fabrice Rastello, INRIA/LIP, ENS Lyon \\
+\hline
+ESE 
+& Martin Monperrus, CRIStAL, Université de Lille\\
+\footnotesize Génie Logiciel Empirique
+& Jean-Rémy Falleri, LABRI, ENSEIRB-MATMECA\\
+\hline
+
+% chg de repsonsables en cours
+%FORWAL & Yohan Boichut, LIFO, Université d'Orléans\\
+%\footnotesize  Formalismes et Outils pour la Vérification et la Validation  
+%       & Pierre-Cyrille HEAM, LIFC, Université de Franche-Comté \\
+
+GLACE 
+& Sébastien Mosser, I3S, Université de Nice\\
+\footnotesize Génie Logiciel pour les systèmes Cyber-physiquEs
+&Romain Rouvoy, CRIStAL, Université Lille 1\\
+\hline
+Action IDM
+& Eric Cariou, LIUPPA, Université de Pau et des pays de l'Adour\\
+\footnotesize Ingénierie Dirigée par les Modèles 
+& Clémentine Nébut, LIRMM, Université de Montpellier\\
+\hline
+IE 
+& Régine Laleau, LACL, Université de Paris-Est Créteil\\
+\footnotesize Ingénierie des Exigences
+& Camille Salinesi, CRI, Université Paris 1 Panthéon-Sorbone\\
+\hline
+
+% se regroupe dans LTP
+%LaMHa & Gaétan Hains, LACL, Université de Paris-Est\\
+%\footnotesize Langages et Modèles de Haut-niveau pour la programmation
+%parallèle, distribuée, de grilles de calcul et Applications 
+%      & Frédéric Gava, LACL, Université de Paris-Est\\
+
+LTP & Sandrine Blazy, IRISA, Université de Rennes\\
+\footnotesize Langages, Types et Preuves 
+    & Marc Pouzet,  LIENS, Membre Junior IUF, ENS, Université Pierre et Marie Curie\\
+\hline
+
+MFDL 
+& Aurélie Hurault, IRIT, ENSEEIHT\\
+\footnotesize  Méthodes Formelles
+& Akram Idani, LIG, Université Joseph Fourier\\
+\footnotesize  dans le Développement Logiciel 
+& Virginie Wiels, ONERA\\
+\hline
+
+% chg de repsonsables en cours
+MTV2 &Nikolai Kosmatov, CEA-LIST\\
+\footnotesize Méthodes de test pour la validation et la vérification  
+     & Lydie du Bousquet, LIG, Université Grenoble\\
+\hline
+
+RIMEL 
+& Nicolas Anquetil, CRIStAL, Université de Lille\\
+\footnotesize Rétro-Ingénierie, Maintenance et Evolution des Logiciels
+& Christelle Urtado, Mines d'Alès\\
+\hline
+
+SdS 
+& Flavio Oquendo, IRISA, Université de Rennes\\
+\footnotesize Systèmes de Systèmes
+& Axel Legay, IRISA, Inria\\
+& Khalil Drira, LAAS, CNRS\\
+
+\hline 
+\textbf{Action transversale}&\\
+\hline 
+
+Action ALROB & Jacques Malenfant, LIP6\\
+\footnotesize
+Architecture logicielles pour la robotique 
+             &David Andreu, LIRMM\\
+\footnotesize
+autonome et les systèmes auto-adaptables
+             &Noury Bouraqadi, Mines de Douai\\
+             &Serge Stinckwich, UCBN \& UMMISCO\\
+\hline
+
+\hline
+
+
+\hline
+		\end{tabular}
+}
+
+%A noter qu'un groupe de travail ``Compilation'', animé par Laure Gonnord (LIFL) et Fabrice Rastello (LIP)
+%  s'est formé en cours de quadriennal et a organisé des journées de travail, soutenues
+%par le GDR GPL, en 2010 et 2011.
+\medskip
+
+\noindent
+%Par ailleurs plus de la moitié des responsables de groupes ont été renouvelés pour ce quadriennal. 
+%Les nouveaux responsables sont Nicolas Anquetil, Sandrine Blazy, Eric Cariou, Jean-Rémy Falleri, Aurélie Hurault, Régine Laleau, Martin Monperrus, Sébastien Mosser, Clémentine Nébut, Camille Salinesi et Christelle Urtado.
+%\pem{nommer les nouveaux entrants?}
+
+Les groupes de  travail seront encouragés à organiser des journées de travail et à participer à l'animation des journées nationales. Ils contribueront également à l'organisation de conférences nationales ou internationales.
+
+%Tous les groupes de travail ont participé à la sélection des articles présentés lors des trois éditions des journées nationales. Tous les groupes ont organisé des réunions de travail ou ont contribué à l'organisation de conférences nationales.
+
+\subsection{Comité  Scientifique}
+Membres du comité scientifique:
+
+\begin{itemize}
+    \item Franck Barbier (LIUPPA, Pau)
+    \item Pierre Cointe (LINA, Nantes)
+    \item Roberto Di Cosmo (PPS, Paris VII)
+    \item Laurence Duchien (CRIStAL, Lille)
+    \item Christophe Dony (LIRMM, Montpellier)
+    \item Stéphane Ducasse (INRIA, Lille)
+    \item Marie-Claude Gaudel (LRI, Orsay)
+    \item Jean-Louis Giavitto (IRCAMS, Paris)
+    \item Yann-Gaël Guéhéneuc (Polytech, Montréal)
+    \item Olivier Hermant (Mines Paris)
+    \item Nicolas Halbwachs (Verimag, Grenoble)
+    \item Gaétan Hains (LACL, Créteil)
+    \item Pascale Le Gall (MAS, Centrale Paris)
+    \item Valérie Issarny (INRIA, Rocquencourt)
+    \item Jean-Marc Jézéquel (IRISA, Rennes)
+    \item Dominique Méry (LORIA, Nancy)
+    \item Christel Seguin (ONERA, Toulouse)
+ \end{itemize}   
+
+ \medskip
+
+ \noindent
+Le comité scientifique aura pour mission principale de donner son avis sur les
+actions du GDR, en particulier lors d'appels à actions spécifiques ou d'actions
+prospectives pour participer à l'évaluation des propositions.
+Il se réunira une fois par an lors des journées nationales avec le bureau du
+GDR GPL et les responsables des groupes de travail et actions transverses pour
+faire le bilan de l'année, mais également pour proposer de nouvelles actions.
+De nouvelles personnalités ont intégré le comité scientifique pour la période
+2016-2019 (Pierre Cointe, Laurence Duchien, Jean-Louis Giavitto, Yann-Gaël
+Guéhéneuc, Olivier Hermant, Pascale Le Gall, Christel Seguin).
+
+
+\subsection{Outils de communication}
+
+\subsubsection{Outils électroniques}
+
+Les outils électroniques existants continueront de nous aider dans la communication vers la communauté du GDR :
+
+\begin{itemize}
+\item la liste de diffusion \texttt{gdr.gpl@imag.fr}  continuera à fonctionner
+  pour l'annonce des événements soutenus ou organisés par le GDR, ainsi que les
+  annonces d'emplois liées à la communauté avec les mêmes règles que
+  précédemment (liste modérée avec abonnés ayant un droit de postage)
+
+\item le site web  \texttt{http://gdr-gpl.cnrs.fr}  permet la présentation du
+  GDR et de ses activités. Nous ferons évoluer le site dans les mois qui
+  viennent de façon à proposer un contenu plus fourni avec par exemple la liste
+  des sujets de thèse et des bibliographies de référence.
+  Cette évolution passera par un site ouvert à plus de contributeurs.
+  Un de nos objectifs du prochain quadriennal est d'augmenter le nombre de
+  contributeurs au site web.
+
+\item un compte Twitter a été créé en 2013 et continuera d'être alimenté.
+\end{itemize}
+
+\subsubsection{Outils de diffusion}
+
+Nous proposons des outils de diffusion de façon à mieux faire connaître les
+actions des groupes et des équipes :
+
+\begin{itemize}
+\item la mise en place de nouveaux outils de façon à dénombrer les équipes et à mieux cerner leurs compétences et de façon à proposer une cartographie des compétences des laboratoires dans le domaine du Génie de la Programmation et du Logiciel. Nous avons commencé par un sondage. Ce sondage est en cours d'exploitation. Nous fournirons alors une carte en cours d'année des compétences.
+\item un bulletin du GDR sera édité régulièrement (au moins une fois par an), de façon à donner des nouvelles des différents groupes et de leurs rencontres, ainsi que la liste des prochaines manifestations.
+\end{itemize}
+
+%Nouvelles actions
+%Dénombrer les personnes dans les équipes
+%Carte de compétences des laboratoires
+%Bulletin Lettre du GDR
+
+
+
+\section{Aspects administratifs et répartition de la dotation}\label{budget}
+
+\subsection{Aspects administratifs}
+
+Tous les aspects administratifs liés à la gestion du budget, en particulier la
+gestion des comptes dans XLab et le paiement des divers versements et
+subventions accordées par le GDR GPL, seront effectués sous la responsabilité
+de Chantal Chrétien (Responsable Administratif, LORIA).  
+
+\subsection{Répartition de la dotation}
+
+La dotation sera, comme dans le précédent quadriennal, répartie entre l'organisation des journées nationales, les réunions des groupes de travail, le soutien à l'école Jeunes Chercheurs en Programmation et les actions de mobilités. Viendront ensuite le financement d'actions ponctuelles.
+
+\section{Conclusion}\label{conclusion}
+
+Ce troisième quadriennal du GDR Génie de la Programmation et du Logiciel aura
+pour principal objectif de renforcer les échanges et les reflexions au sein de
+la communauté scientifique du domaine telle qu'elle a été définie sur les deux
+premières périodes. 
+Cet objectif sera atteint par la reconduction des journées nationales qui sont
+devenues le rendez-vous phare de la communauté, mais également par l'animation
+de journées thématiques organisées par les groupes de travail. Nous proposons
+de reconduire et d'amplifier les actions en direction des jeunes chercheurs de
+façon à préparer l'avenir : bourses de mobilité, soutien à l'Ecole de Jeunes
+Chercheurs en Programmation, accès gratuit aux journées nationales, prix de
+thèse du GDR GPL.
+
+Nous envisageons également de renforcer le partage des idées scientifiques et
+des bonnes pratiques au sein de la communauté en menant une prospective
+scientifique régulière, en mettant en place un cadre favorisant les relations
+entre académiques et industriels et une ouverture vers l'international, mais
+aussi par le soutien dans l'écriture d'articles ou de réponses à des appels à
+projets et de la mise à disposition de répertoires de documents scientifiques
+et d'outils de recherche. 
+\\
+%Ces actions seront menés par les membres du bureau avec l'aide des groupes de travail.\\
+
+Finalement, les outils de communication (la liste de diffusion et le site web) seront étendus par un bulletin du GDR rapportant les activités des groupes et par une cartographie des compétences à destination de nos partenaires académiques et industriels.
+
+Le succès de ce troisième quadriennal passera par la mobilisation des groupes
+de travail, du bureau, du conseil scientifique et de la communauté au sens
+large.
+\end{document}
